@@ -1,7 +1,7 @@
 <script>
     import { goto } from '$app/navigation';
 	import { getUserFromSession } from '$lib/functions/user';
-	import { auth } from '../about/firebase';
+	import { auth } from '../firebase';
 	import { onMount } from 'svelte';
 
     function handleLogout() {
@@ -11,11 +11,16 @@
 	}
 	function handleAdd(){
 		console.log('User add');
+		goto('../adduser');
 	}
 </script>
-<center>
-<h1>congratulation!!!</h1>
-<h3>Login successed!</h3>
-</center>
-<button type="button" on:click={handleLogout}> ログアウト </button>
+<div>
 <button type="button" on:click={handleAdd}>ユーザー追加</button>
+<button type="button" on:click={handleLogout}> ログアウト </button>
+</div>
+<style>
+div{
+	display: flex;
+	justify-content: space-around;
+}
+</style>

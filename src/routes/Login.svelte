@@ -31,5 +31,3 @@
 <div>
 	<button type="button" on:click={handleLoginWithGoogle}> Sign In with Google </button>
 </div>
-
-<a href="/block">blockPage</a>
